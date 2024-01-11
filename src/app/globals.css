@@ -61,8 +61,8 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: hsl(270, 21%, 93%);
+  color: rgb(32, 32, 32);
+  background: rgb(237, 233, 241);
 }
 
 a {
