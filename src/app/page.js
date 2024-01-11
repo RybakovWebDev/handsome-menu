@@ -12,7 +12,6 @@ export default function Home() {
 
   const handleMenuClick = (e, slug) => {
     if (slug === imageSlug) return;
-    console.log("Changing");
     setImageSlug(slug);
   };
   return (

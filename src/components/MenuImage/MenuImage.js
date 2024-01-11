@@ -1,12 +1,20 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import styles from "./MenuImage.module.css";
 
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { MENULINKS } from "@/app/constants";
 
 function MenuImage({ slug }) {
+  const menu = MENULINKS.find((link) => link.slug === slug);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(false);
+  }, [slug]);
+
   return (
     slug && (
       <AnimatePresence mode='wait'>
@@ -14,11 +22,11 @@ function MenuImage({ slug }) {
           className={styles.imageWrapper}
           key={slug}
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={{ opacity: isLoaded ? 1 : 0, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
           transition={{ duration: 0.5 }}
         >
-          <Image className={styles.image} src={`/images/${slug}.png`} alt={`${slug} menu`} fill />
+          <Image className={styles.image} src={menu.image} alt={`${slug} menu`} fill onLoad={() => setIsLoaded(true)} />
         </motion.div>
       </AnimatePresence>
     )

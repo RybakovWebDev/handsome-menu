@@ -1,33 +1,46 @@
-export const NAVLINKS = [
+import foodMenu from "../../public/images/food.png";
+import cocktailsMenu from "../../public/images/cocktails.png";
+import coffeeMenu from "../../public/images/coffee.png";
+import spiritsMenu from "../../public/images/spirits.png";
+import teaSoftMenu from "../../public/images/teaSoft.png";
+import wineBeerMenu from "../../public/images/wineBeer.png";
+
+export const MENULINKS = [
   {
     title: "Food",
     slug: "food",
     color: "hsl(36, 47%, 88%)",
+    image: foodMenu,
   },
   {
     title: "Coffee",
     slug: "coffee",
     color: "hsl(0, 0%, 0%)",
+    image: coffeeMenu,
   },
   {
     title: "Tea & Soft drinks",
     slug: "teaSoft",
     color: "hsl(0, 0%, 0%)",
+    image: teaSoftMenu,
   },
   {
     title: "Cocktails",
     slug: "cocktails",
     color: "hsl(0, 0%, 0%)",
+    image: cocktailsMenu,
   },
   {
     title: "Spirits",
     slug: "spirits",
     color: "hsl(0, 0%, 0%)",
+    image: spiritsMenu,
   },
   {
     title: "Wine & Beer",
     slug: "wineBeer",
     color: "hsl(0, 0%, 0%)",
+    image: wineBeerMenu,
   },
 ];
 

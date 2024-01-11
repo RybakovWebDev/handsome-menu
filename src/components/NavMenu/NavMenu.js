@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import styles from "./NavMenu.module.css";
 
-import { NAVLINKS, finalVerticalOffset, initialVerticalOffset } from "@/app/constants";
+import { MENULINKS, finalVerticalOffset, initialVerticalOffset } from "@/app/constants";
 
 const animationFinished = { opacity: 1, scale: 1 };
 
@@ -45,7 +45,7 @@ function NavMenu({ handleMenuClick }) {
     <div className={styles.wrapper}>
       <nav className={styles.nav} onMouseLeave={() => setHoveredNavItem(null)}>
         <motion.ul variants={container} initial='hidden' animate='show' className={styles.ul}>
-          {NAVLINKS.map((l) => {
+          {MENULINKS.map((l) => {
             return (
               <motion.li variants={item} key={l.title} className={styles.li}>
                 <button onMouseEnter={() => setHoveredNavItem(l.title)} onClick={(e) => handleMenuClick(e, l.slug)}>
