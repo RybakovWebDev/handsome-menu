@@ -1,0 +1,15 @@
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.address {
+  font-weight: 600;
+}

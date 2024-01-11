@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  animation: fadeIn 300ms ease-in-out forwards;
+}
+
+.lineWrapper {
+  width: 10rem;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
