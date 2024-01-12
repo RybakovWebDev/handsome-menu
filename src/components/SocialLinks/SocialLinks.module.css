@@ -1,0 +1,17 @@
+.iconsWrapper {
+  display: flex;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+}
+
+.divider {
+  margin: 0 0.5rem 0 0.5rem;
+  opacity: 0.5;
+}

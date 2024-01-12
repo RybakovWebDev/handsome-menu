@@ -1,3 +1,6 @@
+import { Instagram, PhoneCall } from "react-feather";
+import { PiTelegramLogoThin } from "react-icons/pi";
+
 import foodMenu from "../../public/images/food.png";
 import cocktailsMenu from "../../public/images/cocktails.png";
 import coffeeMenu from "../../public/images/coffee.png";
@@ -41,6 +44,24 @@ export const MENULINKS = [
     slug: "wineBeer",
     color: "hsl(0, 0%, 0%)",
     image: wineBeerMenu,
+  },
+];
+
+export const CONTACTS = [
+  {
+    title: "Telegram",
+    link: "https://t.me/Sky_mother",
+    icon: <PiTelegramLogoThin size={30} />,
+  },
+  {
+    title: "Instagram",
+    link: "https://www.instagram.com/handsome.tbilisi?igsh=cXprOXA1ODd3NHhn",
+    icon: <Instagram size={30} strokeWidth={1} />,
+  },
+  {
+    title: "Phone",
+    link: "tel:+995599138719",
+    icon: <PhoneCall size={30} strokeWidth={1} />,
   },
 ];
 
