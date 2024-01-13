@@ -1,12 +1,12 @@
 import { Instagram, PhoneCall } from "react-feather";
 import { PiTelegramLogoThin } from "react-icons/pi";
 
-import foodMenu from "../../public/images/food.png";
-import cocktailsMenu from "../../public/images/cocktails.png";
-import coffeeMenu from "../../public/images/coffee.png";
-import spiritsMenu from "../../public/images/spirits.png";
-import teaSoftMenu from "../../public/images/teaSoft.png";
-import wineBeerMenu from "../../public/images/wineBeer.png";
+import foodMenu from "../../public/images/food.jpg";
+import cocktailsMenu from "../../public/images/cocktails.jpg";
+import coffeeMenu from "../../public/images/coffee.jpg";
+import spiritsMenu from "../../public/images/spirits.jpg";
+import teaSoftMenu from "../../public/images/teaSoft.jpg";
+import wineBeerMenu from "../../public/images/wineBeer.jpg";
 
 export const MENULINKS = [
   {
