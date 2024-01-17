@@ -161,7 +161,7 @@ export const MENU = [
           {
             name: "Alternative milk",
             subtitle: "(banana milk, soy milk, oat milk, vanilla milk)",
-            price: "+2 GEL",
+            price: "+2",
           },
         ],
       },

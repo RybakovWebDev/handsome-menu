@@ -27,8 +27,11 @@ const renderCategory = (category) => {
       <motion.h3>{category.category}</motion.h3>
       {category.positions.map((p) => (
         <motion.div key={p.name} className={category.fullWidth ? styles.itemWrapperFullWidth : styles.itemWrapper}>
-          <h4>{p.name}</h4>
-          <h4>{p.price}</h4>
+          <div>
+            <h4>{p.name}</h4>
+            {p.subtitle ? <p>{p.subtitle}</p> : null}
+          </div>
+          <h4 className={styles.price}>{p.price}</h4>
         </motion.div>
       ))}
     </motion.div>
