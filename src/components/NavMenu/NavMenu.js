@@ -22,7 +22,7 @@ function NavMenu({ handleMenuClick }) {
       y: 0,
 
       transition: {
-        delayChildren: 0.5,
+        delayChildren: 0.3,
         staggerChildren: 0.1,
       },
     },

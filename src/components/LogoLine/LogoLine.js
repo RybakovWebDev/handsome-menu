@@ -15,7 +15,7 @@ function LogoLine({ toRight }) {
       }}
       initial={{ height: "2px", x: toRight ? -300 : 300 }}
       transition={smoothSpring}
-    ></motion.div>
+    />
   );
 }
 

@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 import styles from "./MenuImage.module.css";
 
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import { MENULINKS } from "@/app/constants";
 
 function MenuImage({ slug }) {

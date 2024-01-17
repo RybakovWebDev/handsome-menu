@@ -1,23 +1,24 @@
 "use client";
-import Footer from "@/components/Footer";
-import styles from "./page.module.css";
-
-import Logo from "@/components/Logo";
-import MenuImage from "@/components/MenuImage";
-import NavMenu from "@/components/NavMenu";
 import { useState } from "react";
 
+import styles from "./page.module.css";
+
+import Footer from "@/components/Footer";
+import Logo from "@/components/Logo";
+import NavMenu from "@/components/NavMenu";
+import MenuText from "@/components/MenuText";
+
 export default function Home() {
-  const [imageSlug, setImageSlug] = useState(null);
+  const [menuSlug, setMenuSlug] = useState(null);
 
   const handleMenuClick = (e, slug) => {
-    if (slug === imageSlug) return;
-    setImageSlug(slug);
+    if (slug === menuSlug) return;
+    setMenuSlug(slug);
   };
   return (
     <main className={styles.main}>
       <div className={styles.wrapper}>
-        <header>
+        <header className={styles.header}>
           <Logo />
         </header>
         <div className={styles.infoWrapper}>
@@ -38,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <NavMenu handleMenuClick={handleMenuClick} />
-        <MenuImage slug={imageSlug} />
+        <MenuText slug={menuSlug} />
       </div>
       <Footer />
     </main>
