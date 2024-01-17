@@ -314,11 +314,11 @@ export const MENU = [
         positions: [
           {
             name: "Red dry wine",
-            price: "8",
+            price: "10",
           },
           {
             name: "Rkatseteli",
-            price: "8",
+            price: "15",
           },
         ],
       },
