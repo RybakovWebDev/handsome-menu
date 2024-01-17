@@ -29,7 +29,7 @@ const renderCategory = (category) => {
         <motion.div key={p.name} className={category.fullWidth ? styles.itemWrapperFullWidth : styles.itemWrapper}>
           <div>
             <h4>{p.name}</h4>
-            {p.subtitle ? <p>{p.subtitle}</p> : null}
+            {p.subtitle ? <p className={styles.subtitle}>{p.subtitle}</p> : null}
           </div>
           <h4 className={styles.price}>{p.price}</h4>
         </motion.div>
