@@ -38,6 +38,16 @@ const renderCategory = (category) => {
   );
 };
 
+const renderType = (type, content) => {
+  const categoriesOfType = content.filter((category) => category.type === type);
+  return (
+    <motion.div className={styles.typeWrapper} key={type}>
+      <h2>{type}</h2>
+      {categoriesOfType.map((category) => renderCategory(category))}
+    </motion.div>
+  );
+};
+
 function MenuText({ slug }) {
   const selectedMenu = MENU.find((item) => item.slug === slug);
   return (
@@ -51,7 +61,9 @@ function MenuText({ slug }) {
           exit='hidden'
           className={styles.wrapper}
         >
-          {selectedMenu.content.map((c) => renderCategory(c))}
+          {selectedMenu.types
+            ? selectedMenu.types.map((type) => renderType(type, selectedMenu.content))
+            : selectedMenu.content.map((c) => renderCategory(c))}
         </motion.section>
       </AnimatePresence>
     )

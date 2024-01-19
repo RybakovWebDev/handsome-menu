@@ -51,14 +51,12 @@ export const MENU = [
   {
     title: "FOOD",
     slug: "food",
+    types: ["MAIN", "PANCAKES", "SOUP"],
     content: [
       {
+        type: "MAIN",
         category: "SANDWICHES",
         positions: [
-          {
-            name: "Club",
-            price: "20",
-          },
           {
             name: "BLT",
             price: "17",
@@ -67,9 +65,14 @@ export const MENU = [
             name: "Salmon and cheese",
             price: "22",
           },
+          {
+            name: "Add cheese / halapeno / confi / mushrooms",
+            price: "2",
+          },
         ],
       },
       {
+        type: "MAIN",
         category: "SANDBURGERS",
         positions: [
           {
@@ -80,19 +83,12 @@ export const MENU = [
             name: "Mushrooms stew",
             price: "22",
           },
-          {
-            name: "Bacon and chips",
-            price: "22",
-          },
         ],
       },
       {
+        type: "PANCAKES",
         category: "CHEDDAR PANCAKES",
         positions: [
-          {
-            name: "Bacon and ayoli",
-            price: "16",
-          },
           {
             name: "Salmon and creamcheese",
             price: "18",
@@ -101,9 +97,14 @@ export const MENU = [
             name: "Mushrooms stew and honey",
             price: "14",
           },
+          {
+            name: "Add bacon",
+            price: "3",
+          },
         ],
       },
       {
+        type: "PANCAKES",
         category: "SWEET PANCAKES",
         positions: [
           {
@@ -111,12 +112,22 @@ export const MENU = [
             price: "14",
           },
           {
-            name: "Orange, condensed milk and coconut",
-            price: "12",
-          },
-          {
             name: "Pear and salted caramel",
             price: "13",
+          },
+        ],
+      },
+      {
+        type: "SOUP",
+        // category: "SOUP",
+        positions: [
+          {
+            name: "Cheese and potato",
+            price: "10",
+          },
+          {
+            name: "Mushroom",
+            price: "10",
           },
         ],
       },

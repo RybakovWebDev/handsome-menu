@@ -6,15 +6,34 @@
   justify-content: center;
 }
 
+.typeWrapper {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typeWrapper h2 {
+  margin: 1rem 0 0 0;
+  font-weight: 800;
+  font-size: 35px;
+}
+
 .categoryWrapper {
   padding: 0 1rem 0 1rem;
-  margin: 1rem 0 3rem 0;
+  margin: 1rem 0 0 0;
   width: 50%;
+  min-height: 12rem;
+}
+
+.typeWrapper .categoryWrapper {
+  width: 100%;
 }
 
 .categoryWrapper h3 {
   margin: 0 0 1rem 0;
   font-size: 30px;
+  font-weight: 400;
 }
 
 .itemWrapper,
