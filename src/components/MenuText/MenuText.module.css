@@ -72,6 +72,9 @@
     justify-content: flex-start;
     flex-direction: column;
   }
+  .typeWrapper {
+    width: 100%;
+  }
   .categoryWrapper {
     margin: 1rem 0 2rem 0;
     padding: 0;
