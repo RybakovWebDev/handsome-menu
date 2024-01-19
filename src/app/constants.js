@@ -59,15 +59,12 @@ export const MENU = [
         positions: [
           {
             name: "BLT",
+            subtitle: "*add cheese / halapeno / confi / mushrooms - 2 lari each",
             price: "17",
           },
           {
             name: "Salmon and cheese",
             price: "22",
-          },
-          {
-            name: "Add cheese / halapeno / confi / mushrooms",
-            price: "2",
           },
         ],
       },
@@ -95,11 +92,8 @@ export const MENU = [
           },
           {
             name: "Mushrooms stew and honey",
+            subtitle: "*add bacon - 3 lari",
             price: "14",
-          },
-          {
-            name: "Add bacon",
-            price: "3",
           },
         ],
       },

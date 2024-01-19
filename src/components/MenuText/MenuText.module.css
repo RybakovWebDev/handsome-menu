@@ -57,12 +57,17 @@
   font-weight: 300;
 }
 
+.itemWrapper .text {
+  width: 90%;
+}
+
 .itemWrapper .price {
   margin: 0 0 0 2rem;
 }
 
 .itemWrapper .subtitle {
-  font-size: 20px;
+  width: 80%;
+  font-size: 18px;
   font-weight: 300;
 }
 
