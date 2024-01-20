@@ -61,6 +61,13 @@
   width: 90%;
 }
 
+.itemWrapper .textCentered {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .itemWrapper .price {
   margin: 0 0 0 2rem;
 }

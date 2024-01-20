@@ -27,11 +27,11 @@ const renderCategory = (category) => {
       <motion.h3>{category.category}</motion.h3>
       {category.positions.map((p) => (
         <motion.div key={p.name} className={category.fullWidth ? styles.itemWrapperFullWidth : styles.itemWrapper}>
-          <div className={styles.text}>
+          <div className={p.price ? styles.text : styles.textCentered}>
             <h4>{p.name}</h4>
             {p.subtitle ? <p className={styles.subtitle}>{p.subtitle}</p> : null}
           </div>
-          <h4 className={styles.price}>{p.price}</h4>
+          {p.price ? <h4 className={styles.price}>{p.price}</h4> : null}
         </motion.div>
       ))}
     </motion.div>

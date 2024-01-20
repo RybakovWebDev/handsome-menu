@@ -51,7 +51,7 @@ export const MENU = [
   {
     title: "FOOD",
     slug: "food",
-    types: ["MAIN", "PANCAKES", "SOUP"],
+    types: ["MAIN", "PANCAKES", "SOUP", "*DAILY SPECIAL"],
     content: [
       {
         type: "MAIN",
@@ -113,7 +113,6 @@ export const MENU = [
       },
       {
         type: "SOUP",
-        // category: "SOUP",
         positions: [
           {
             name: "Cheese and potato",
@@ -122,6 +121,15 @@ export const MENU = [
           {
             name: "Mushroom",
             price: "10",
+          },
+        ],
+      },
+      {
+        type: "*DAILY SPECIAL",
+        positions: [
+          {
+            name: "Ask the bartender!",
+            price: null,
           },
         ],
       },
