@@ -11,7 +11,9 @@ function Logo() {
       <div className={styles.lineWrapper}>
         <LogoLine />
       </div>
-      <Image src={"/images/logo.png"} alt='Bar logo' width={288} height={128} />
+
+      <Image className={styles.image} src={"/images/logo.webp"} alt='Bar logo' width={288} height={128} />
+
       <div className={styles.lineWrapper}>
         <LogoLine toRight={true} />
       </div>

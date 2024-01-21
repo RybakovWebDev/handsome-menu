@@ -10,7 +10,6 @@
   width: 10rem;
   overflow: hidden;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
