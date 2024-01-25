@@ -1,6 +1,5 @@
-import React from "react";
-
 import styles from "./SocialLinks.module.css";
+
 import { CONTACTS } from "@/app/constants";
 
 function SocialLinks() {

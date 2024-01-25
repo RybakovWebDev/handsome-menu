@@ -16,30 +16,6 @@
   align-items: center;
 }
 
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.infoWrapper {
-  margin: 1rem 0 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeIn 300ms ease-in-out forwards;
-}
-
-.description {
-  margin: 0 0 2rem 0;
-}
-
-.day {
-  padding: 0 1rem 0 0;
-  text-align: left;
-  font-weight: 600;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;

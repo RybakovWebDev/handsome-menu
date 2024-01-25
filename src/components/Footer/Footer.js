@@ -1,9 +1,9 @@
-import React from "react";
-
 import styles from "./Footer.module.css";
+
 import SocialLinks from "../SocialLinks";
-import { ADDRESS } from "@/app/constants";
 import MapWrapper from "../MapWrapper";
+
+import { ADDRESS } from "@/app/constants";
 
 function Footer() {
   return (

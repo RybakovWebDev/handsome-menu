@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 import styles from "./Logo.module.css";
 
@@ -12,7 +11,9 @@ function Logo() {
         <LogoLine />
       </div>
 
-      <Image className={styles.image} src={"/images/logo.webp"} alt='Bar logo' width={288} height={128} />
+      <div className={styles.imageWrapper}>
+        <Image className={styles.image} src={"/images/logoIconBlack.webp"} alt='Bar logo' fill sizes='280px' />
+      </div>
 
       <div className={styles.lineWrapper}>
         <LogoLine toRight={true} />
