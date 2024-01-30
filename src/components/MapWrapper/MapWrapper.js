@@ -1,35 +1,27 @@
 "use client";
-import React, { useState } from "react";
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
-import { motion } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
 
 import styles from "./MapWrapper.module.css";
 
-import { ADDRESS } from "@/app/constants";
-
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-const position = { lat: ADDRESS.lat, lng: ADDRESS.lng };
 
 function MapWrapper() {
-  const [mapReady, setMapReady] = useState(false);
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: mapReady ? 1 : 0, y: mapReady ? 0 : 20 }}
-      className={styles.wrapper}
-    >
-      <APIProvider apiKey={API_KEY}>
-        <Map
-          zoom={15}
-          center={position}
-          gestureHandling={"greedy"}
-          disableDefaultUI={true}
-          onTilesLoaded={() => setMapReady(true)}
-        >
-          <Marker position={position} />
-        </Map>
-      </APIProvider>
-    </motion.section>
+    <LazyMotion features={domAnimation}>
+      <m.section
+        initial={{ opacity: 0, height: "20rem" }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className={styles.wrapper}
+      >
+        <iframe
+          loading='lazy'
+          src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Handsome%2C+Tbilisi`}
+          referrerPolicy='no-referrer-when-downgrade'
+          sandbox='allow-scripts allow-same-origin'
+        ></iframe>
+      </m.section>
+    </LazyMotion>
   );
 }
 

@@ -1,19 +1,14 @@
-import dynamic from "next/dynamic";
-const DynamicMapWrapper = dynamic(
-  () => import("../MapWrapper"),
-  { ssr: false } // This line is important. It disables server-side rendering for this module.
-);
-
 import styles from "./Footer.module.css";
 
 import SocialLinks from "../SocialLinks";
+import MapWrapper from "../MapWrapper";
 
 import { ADDRESS } from "@/app/constants";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <DynamicMapWrapper />
+      <MapWrapper />
       <SocialLinks />
       <p>{ADDRESS.street}</p>
       <p>Entrance from Kostava and Vera Park</p>
