@@ -12,7 +12,14 @@ function Logo() {
       </div>
 
       <div className={styles.imageWrapper}>
-        <Image className={styles.image} src={"/images/logoIconBlack.webp"} alt='Bar logo' fill sizes='280px' />
+        <Image
+          className={styles.image}
+          src={"/images/logoIconBlack.webp"}
+          alt='Bar logo'
+          fill
+          sizes='280px'
+          priority={true}
+        />
       </div>
 
       <div className={styles.lineWrapper}>
