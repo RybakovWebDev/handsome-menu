@@ -367,14 +367,6 @@ export const smoothSpring = {
   stiffness: 500,
 };
 
-export const shevronAnimation = {
-  delay: 1,
-  duration: 1,
-  ease: "easeInOut",
-  repeat: Infinity,
-  repeatDelay: 1,
-};
-
 export const initialVerticalOffset = {
   y: 20,
   opacity: 0,
@@ -383,12 +375,4 @@ export const initialVerticalOffset = {
 export const finalVerticalOffset = {
   y: 0,
   opacity: 1,
-};
-
-export const duration300 = {
-  duration: 0.3,
-};
-
-export const duration500 = {
-  duration: 0.5,
 };

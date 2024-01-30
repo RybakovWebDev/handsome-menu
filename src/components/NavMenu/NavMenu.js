@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useId, useState } from "react";
 
-import { LazyMotion, m, domAnimation } from "framer-motion";
+import { LazyMotion, m, domMax } from "framer-motion";
 
 import styles from "./NavMenu.module.css";
 
@@ -44,7 +44,7 @@ function NavMenu({ handleMenuClick }) {
   return (
     <div className={styles.wrapper}>
       <nav className={styles.nav} onMouseLeave={() => setHoveredNavItem(null)}>
-        <LazyMotion features={domAnimation}>
+        <LazyMotion features={domMax}>
           <m.ul variants={container} initial='hidden' animate='show' className={styles.ul}>
             {MENULINKS.map((l) => {
               return (
