@@ -15,6 +15,7 @@ function MapWrapper() {
         className={styles.wrapper}
       >
         <iframe
+          title='Google Map with location of the Handsome bar in Tbilisi'
           loading='lazy'
           src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=Handsome%2C+Tbilisi`}
           referrerPolicy='no-referrer-when-downgrade'
