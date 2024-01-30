@@ -354,16 +354,19 @@ export const CONTACTS = [
     title: "Telegram",
     link: "https://t.me/Sky_mother",
     icon: <PiTelegramLogoThin size={30} />,
+    description: "Contact us on Telegram",
   },
   {
     title: "Instagram",
     link: "https://www.instagram.com/handsome.tbilisi?igsh=cXprOXA1ODd3NHhn",
     icon: <Instagram size={30} strokeWidth={1} />,
+    description: "Follow us on Instagram",
   },
   {
     title: "Phone",
     link: "tel:+995599138719",
     icon: <PhoneCall size={30} strokeWidth={1} />,
+    description: "Contact us by phone",
   },
 ];
 

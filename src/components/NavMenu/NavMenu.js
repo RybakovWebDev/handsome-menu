@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useId, useState } from "react";
 
-import { motion } from "framer-motion";
+import { LazyMotion, m, domAnimation } from "framer-motion";
 
 import styles from "./NavMenu.module.css";
 
@@ -44,26 +44,28 @@ function NavMenu({ handleMenuClick }) {
   return (
     <div className={styles.wrapper}>
       <nav className={styles.nav} onMouseLeave={() => setHoveredNavItem(null)}>
-        <motion.ul variants={container} initial='hidden' animate='show' className={styles.ul}>
-          {MENULINKS.map((l) => {
-            return (
-              <motion.li variants={item} key={l.title} className={styles.li}>
-                <button onMouseEnter={() => setHoveredNavItem(l.title)} onClick={(e) => handleMenuClick(e, l.slug)}>
-                  {l.title}
-                </button>
-                {hoveredNavItem === l.title ? (
-                  <motion.div
-                    className={styles.hovered}
-                    layoutId={id}
-                    initial={hasAnimated ? animationFinished : { opacity: 0, scale: 0 }}
-                    animate={animationFinished}
-                    transition={{ type: "spring", damping: 70, stiffness: 700 }}
-                  />
-                ) : null}
-              </motion.li>
-            );
-          })}
-        </motion.ul>
+        <LazyMotion features={domAnimation}>
+          <m.ul variants={container} initial='hidden' animate='show' className={styles.ul}>
+            {MENULINKS.map((l) => {
+              return (
+                <m.li variants={item} key={l.title} className={styles.li}>
+                  <button onMouseEnter={() => setHoveredNavItem(l.title)} onClick={(e) => handleMenuClick(e, l.slug)}>
+                    {l.title}
+                  </button>
+                  {hoveredNavItem === l.title ? (
+                    <m.div
+                      className={styles.hovered}
+                      layoutId={id}
+                      initial={hasAnimated ? animationFinished : { opacity: 0, scale: 0 }}
+                      animate={animationFinished}
+                      transition={{ type: "spring", damping: 70, stiffness: 700 }}
+                    />
+                  ) : null}
+                </m.li>
+              );
+            })}
+          </m.ul>
+        </LazyMotion>
       </nav>
     </div>
   );

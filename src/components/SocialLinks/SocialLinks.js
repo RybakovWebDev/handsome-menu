@@ -8,7 +8,13 @@ function SocialLinks() {
       {CONTACTS.map((c, i) => {
         return (
           <div className={styles.icon} key={c.title}>
-            <a className={styles.link} target='_blank' rel='noopener noreferrer' href={c.link}>
+            <a
+              className={styles.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              href={c.link}
+              aria-label={c.description}
+            >
               {c.icon}
             </a>
             {i !== CONTACTS.length - 1 && <span className={styles.divider}>|</span>}
