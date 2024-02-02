@@ -87,6 +87,7 @@
   .typeWrapper {
     padding: 0 1rem 0 0;
     width: 100%;
+    align-items: flex-start;
   }
   .categoryWrapper {
     margin: 1rem 0 2rem 0;
