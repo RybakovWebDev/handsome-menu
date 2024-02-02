@@ -40,11 +40,12 @@ export const MENU = [
   {
     title: "FOOD",
     slug: "food",
-    types: ["MAIN", "PANCAKES", "SOUP", "*DAILY SPECIAL"],
+    types: ["SANDWICHES", "SANDBURGERS", "PANCAKES", "SOUP", "OTHER", "*DAILY SPECIAL"],
+    // types: ["MAIN", "PANCAKES", "SOUP", "*DAILY SPECIAL"],
     content: [
       {
-        type: "MAIN",
-        category: "SANDWICHES",
+        type: "SANDWICHES",
+        // category: "SANDWICHES",
         positions: [
           {
             name: "BLT",
@@ -52,14 +53,14 @@ export const MENU = [
             price: "17",
           },
           {
-            name: "Salmon and cheese",
-            price: "22",
+            name: "Mushroom",
+            price: "15",
           },
         ],
       },
       {
-        type: "MAIN",
-        category: "SANDBURGERS",
+        type: "SANDBURGERS",
+        // category: "SANDBURGERS",
         positions: [
           {
             name: "Onion confit and bacon",
@@ -69,26 +70,16 @@ export const MENU = [
             name: "Mushrooms stew",
             price: "22",
           },
-        ],
-      },
-      {
-        type: "PANCAKES",
-        category: "CHEDDAR PANCAKES",
-        positions: [
           {
-            name: "Salmon and creamcheese",
-            price: "18",
-          },
-          {
-            name: "Mushrooms stew and honey",
-            subtitle: "*add bacon - 3 lari",
-            price: "14",
+            name: "Chickenburger",
+            price: "20",
           },
         ],
       },
+
       {
         type: "PANCAKES",
-        category: "SWEET PANCAKES",
+        category: "",
         positions: [
           {
             name: "Nutella and banana",
@@ -97,6 +88,11 @@ export const MENU = [
           {
             name: "Pear and salted caramel",
             price: "13",
+          },
+          {
+            name: "Mushrooms stew and honey",
+            subtitle: "*add bacon - 3 lari",
+            price: "14",
           },
         ],
       },
@@ -107,9 +103,15 @@ export const MENU = [
             name: "Cheese and potato",
             price: "10",
           },
+        ],
+      },
+      {
+        type: "OTHER",
+        // category: "OTHER",
+        positions: [
           {
-            name: "Mushroom",
-            price: "10",
+            name: "Mac & Cheese Bowl",
+            price: "18",
           },
         ],
       },
@@ -178,43 +180,55 @@ export const MENU = [
         positions: [
           {
             name: "Negroni",
-            price: "25",
+            price: "22",
           },
           {
             name: "Boulevardier",
-            price: "25",
+            price: "22",
           },
           {
             name: "Gimlet",
-            price: "23",
+            price: "22",
           },
           {
             name: "Flowered Gimlet",
-            price: "25",
+            price: "22",
           },
           {
             name: "Rubylonesca",
-            price: "23",
+            price: "22",
           },
           {
             name: "Cream Pie",
-            price: "23",
+            price: "22",
           },
           {
             name: "Jäg Young",
-            price: "23",
+            price: "22",
           },
           {
             name: "Bloody Mary",
-            price: "23",
+            price: "22",
           },
           {
             name: "Red Snapper",
-            price: "25",
+            price: "22",
           },
           {
             name: "Bloody Maria",
-            price: "25",
+            price: "22",
+          },
+          {
+            name: "Berry Sour",
+            price: "22",
+          },
+          {
+            name: "Cider Sprits",
+            price: "22",
+          },
+          {
+            name: "Fresh Friday",
+            price: "22",
           },
         ],
       },
@@ -228,8 +242,8 @@ export const MENU = [
         category: "SPIRITS",
         positions: [
           {
-            name: "Vodka Absolut",
-            price: "8",
+            name: "Vodka",
+            price: "6",
           },
           {
             name: "Gin Jako",
@@ -237,11 +251,11 @@ export const MENU = [
           },
           {
             name: "Gin Bombey",
-            price: "14",
+            price: "12",
           },
           {
             name: "Tequila Olmeca",
-            price: "14",
+            price: "12",
           },
           {
             name: "Whiskey Jameson",
@@ -253,23 +267,23 @@ export const MENU = [
           },
           {
             name: "Cherry liqueur",
-            price: "10",
-          },
-          {
-            name: "Becherovka",
             price: "8",
           },
           {
+            name: "Becherovka",
+            price: "6",
+          },
+          {
             name: "Vermouth",
-            price: "10",
+            price: "8",
           },
           {
             name: "Gin + tonic",
-            price: "18",
+            price: "16",
           },
           {
             name: "Whiskey + cola",
-            price: "18",
+            price: "16",
           },
         ],
       },

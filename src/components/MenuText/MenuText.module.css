@@ -23,7 +23,7 @@
   padding: 0 1rem 0 1rem;
   margin: 1rem 0 0 0;
   width: 50%;
-  min-height: 12rem;
+  min-height: 10rem;
 }
 
 .typeWrapper .categoryWrapper {
@@ -32,8 +32,8 @@
 
 .categoryWrapper h3 {
   margin: 0 0 1rem 0;
-  font-size: 30px;
-  font-weight: 400;
+  font-size: 35px;
+  font-weight: 800;
 }
 
 .itemWrapper,
@@ -85,11 +85,13 @@
     flex-direction: column;
   }
   .typeWrapper {
+    padding: 0 1rem 0 0;
     width: 100%;
   }
   .categoryWrapper {
     margin: 1rem 0 2rem 0;
     padding: 0;
     width: 100%;
+    min-height: 4rem;
   }
 }

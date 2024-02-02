@@ -8,11 +8,12 @@
 }
 
 .nav button {
+  padding: 0;
+  height: 2rem;
   background: none;
   border: none;
   font: inherit;
   color: inherit;
-  padding: 0;
   cursor: pointer;
   outline: inherit;
 }
@@ -28,24 +29,43 @@
   display: flex;
 }
 
+.selected,
 .hovered {
   position: absolute;
-  bottom: -1px;
+  bottom: -5px;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   background-color: black;
+}
+
+.hovered {
+  height: 1px;
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 @media only screen and (max-width: 500px) {
   .wrapper {
     align-items: flex-start;
   }
+
+  .nav button {
+    height: 1.5rem;
+  }
+
   .ul {
     flex-direction: column;
   }
   .li {
     margin: 0 0 1rem 0;
+  }
+  .selected {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -5px;
+    width: 2px;
+    height: 100%;
   }
   .hovered {
     background-color: transparent;
