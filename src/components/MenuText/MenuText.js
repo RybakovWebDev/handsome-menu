@@ -29,7 +29,14 @@ const renderCategory = (category) => {
         {category.positions.map((p) => (
           <m.div key={p.name} className={category.fullWidth ? styles.itemWrapperFullWidth : styles.itemWrapper}>
             <div className={p.price ? styles.text : styles.textCentered}>
-              <h4>{p.name}</h4>
+              <h4 className={p.name ? undefined : styles.empty}>{p.name}</h4>
+              {p.options ? (
+                <ul>
+                  {p.options.map((o) => {
+                    return <li key={o}>{o}</li>;
+                  })}
+                </ul>
+              ) : null}
               {p.subtitle ? <p className={styles.subtitle}>{p.subtitle}</p> : null}
             </div>
             {p.price ? <h4 className={styles.price}>{p.price}</h4> : null}

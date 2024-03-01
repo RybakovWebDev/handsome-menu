@@ -40,39 +40,50 @@ export const MENU = [
   {
     title: "FOOD",
     slug: "food",
-    types: ["SANDWICHES", "SANDBURGERS", "PANCAKES", "SOUP", "OTHER", "*DAILY SPECIAL"],
+    types: ["STARTERS", "MAIN", "PANCAKES", "BURGERS", "*DAILY SPECIAL"],
     // types: ["MAIN", "PANCAKES", "SOUP", "*DAILY SPECIAL"],
     content: [
       {
-        type: "SANDWICHES",
+        type: "STARTERS",
         // category: "SANDWICHES",
         positions: [
           {
-            name: "BLT",
-            subtitle: "*add cheese / halapeno / confi / mushrooms - 2 lari each",
-            price: "17",
+            name: "Cheese soup",
+            price: "12",
           },
           {
-            name: "Mushroom",
-            price: "15",
+            name: "Chicken soup",
+            price: "12",
+          },
+          {
+            name: "",
+            price: "",
+          },
+          {
+            name: "Falafel",
+            price: "12",
+          },
+          {
+            name: "Cole Slow",
+            price: "5",
+          },
+          {
+            name: "Country style potato",
+            price: "10",
           },
         ],
       },
+
       {
-        type: "SANDBURGERS",
-        // category: "SANDBURGERS",
+        type: "MAIN",
         positions: [
           {
-            name: "Onion confit and bacon",
-            price: "22",
+            name: "Mac & Cheese Bowl",
+            price: "18",
           },
           {
-            name: "Mushrooms stew",
-            price: "22",
-          },
-          {
-            name: "Chickenburger",
-            price: "20",
+            name: "Draniki (potato pancakes) with sour cream",
+            price: "16",
           },
         ],
       },
@@ -87,34 +98,55 @@ export const MENU = [
           },
           {
             name: "Pear and salted caramel",
-            price: "13",
+            price: "14",
           },
           {
             name: "Mushrooms stew and honey",
             subtitle: "*add bacon - 3 lari",
-            price: "14",
+            price: "15",
           },
         ],
       },
+
       {
-        type: "SOUP",
+        type: "BURGERS",
         positions: [
           {
-            name: "Cheese and potato",
-            price: "10",
+            name: "Cheeseburger",
+            price: "20",
           },
-        ],
-      },
-      {
-        type: "OTHER",
-        // category: "OTHER",
-        positions: [
           {
-            name: "Mac & Cheese Bowl",
-            price: "18",
+            name: "Confi Bacon",
+            price: "22",
+          },
+          {
+            name: "Hot Bacon",
+            price: "22",
+          },
+          {
+            name: "Mushrooms Stew",
+            price: "22",
+          },
+          {
+            name: "Chickenburger",
+            price: "20",
+          },
+          {
+            name: "Triple Cheese",
+            price: "20",
+          },
+          {
+            name: "Handsome Burger",
+            price: "20",
+          },
+          {
+            name: "Choose your garnish:",
+            price: " ",
+            options: ["Falafel", "Cole Slow", "Country style potato"],
           },
         ],
       },
+
       {
         type: "*DAILY SPECIAL",
         positions: [

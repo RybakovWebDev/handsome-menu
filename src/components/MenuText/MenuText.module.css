@@ -64,6 +64,7 @@
 .itemWrapper .textCentered {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -72,10 +73,20 @@
   margin: 0 0 0 2rem;
 }
 
+.itemWrapper ul {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 300;
+}
+
 .itemWrapper .subtitle {
   width: 80%;
   font-size: 18px;
   font-weight: 300;
+}
+
+.empty {
+  margin: 1rem 0 0 0;
 }
 
 @media only screen and (max-width: 700px) {
