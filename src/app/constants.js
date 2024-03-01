@@ -140,6 +140,10 @@ export const MENU = [
             price: "20",
           },
           {
+            name: "Extra patty",
+            price: "+8",
+          },
+          {
             name: "Choose your garnish:",
             price: " ",
             options: ["Falafel", "Cole Slow", "Country style potato"],
