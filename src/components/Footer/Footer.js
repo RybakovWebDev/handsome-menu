@@ -1,9 +1,12 @@
+import dynamic from "next/dynamic";
+
 import styles from "./Footer.module.css";
 
 import SocialLinks from "../SocialLinks";
-import MapWrapper from "../MapWrapper";
 
-import { ADDRESS } from "@/app/constants";
+const MapWrapper = dynamic(() => import("@/components/MapWrapper"));
+
+import { ADDRESS } from "@/constants";
 
 function Footer() {
   return (

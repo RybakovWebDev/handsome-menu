@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { Instagram, PhoneCall } from "react-feather";
-import Telegram from "../../public/images/telegram-logo-thin.svg";
+import Telegram from "../public/images/telegram-logo-thin.svg";
 
 export const MENULINKS = [
   {
@@ -41,7 +41,7 @@ export const MENU = [
     title: "FOOD",
     slug: "food",
     types: ["STARTERS", "MAIN", "PANCAKES", "BURGERS", "*DAILY SPECIAL"],
-    // types: ["MAIN", "PANCAKES", "SOUP", "*DAILY SPECIAL"],
+    // types: ["MAIN", "PANCAKES"],
     content: [
       {
         type: "STARTERS",

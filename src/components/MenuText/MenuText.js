@@ -4,14 +4,18 @@ import { AnimatePresence, LazyMotion, domAnimation, m } from "framer-motion";
 
 import styles from "./MenuText.module.css";
 
-import { MENU } from "@/app/constants";
+import { MENU } from "@/constants";
 
 const container = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, height: "0rem" },
   show: {
     opacity: 1,
+    height: "auto",
     transition: {
       staggerChildren: 0.2,
+      height: {
+        duration: 0.1,
+      },
     },
   },
 };

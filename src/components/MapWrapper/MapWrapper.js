@@ -1,13 +1,15 @@
 "use client";
-import { LazyMotion, domAnimation, m } from "framer-motion";
+import { LazyMotion, m } from "framer-motion";
 
 import styles from "./MapWrapper.module.css";
 
 const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
+const loadFeatures = () => import("../../features").then((res) => res.default);
+
 function MapWrapper() {
   return (
-    <LazyMotion features={domAnimation}>
+    <LazyMotion features={loadFeatures}>
       <m.section
         initial={{ opacity: 0, height: "20rem" }}
         animate={{ opacity: 1 }}

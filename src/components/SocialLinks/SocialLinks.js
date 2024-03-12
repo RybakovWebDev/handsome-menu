@@ -1,6 +1,6 @@
 import styles from "./SocialLinks.module.css";
 
-import { CONTACTS } from "@/app/constants";
+import { CONTACTS } from "@/constants";
 
 function SocialLinks() {
   return (
