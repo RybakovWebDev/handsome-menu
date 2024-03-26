@@ -44,7 +44,7 @@
   background-color: rgb(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
   .wrapper {
     align-items: flex-start;
   }
