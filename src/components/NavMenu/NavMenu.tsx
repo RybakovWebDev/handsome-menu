@@ -56,10 +56,10 @@ const NavMenu: React.FC<NavMenuProps> = ({ handleMenuClick }) => {
     let loopTimeoutId = window.setTimeout(() => {
       MENULINKS.forEach((link, index) => {
         let timeoutId = window.setTimeout(() => {
-          setNavItem({ ...navItem, selectedItem: link.title });
+          setNavItem((prevNavItem) => ({ ...prevNavItem, selectedItem: link.title }));
           if (index === MENULINKS.length - 1) {
             window.setTimeout(() => {
-              setNavItem({ ...navItem, selectedItem: null });
+              setNavItem((prevNavItem) => ({ ...prevNavItem, selectedItem: null }));
               setCanHover(true);
             }, 500);
           }
