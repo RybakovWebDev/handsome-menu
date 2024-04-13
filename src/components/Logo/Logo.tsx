@@ -1,10 +1,11 @@
+import React from "react";
 import Image from "next/image";
 
 import styles from "./Logo.module.css";
 
 import LogoLine from "../LogoLine";
 
-function Logo() {
+const Logo: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.lineWrapper}>
@@ -23,10 +24,10 @@ function Logo() {
       </div>
 
       <div className={styles.lineWrapper}>
-        <LogoLine toRight={true} />
+        <LogoLine rightDirection={true} />
       </div>
     </div>
   );
-}
+};
 
 export default Logo;

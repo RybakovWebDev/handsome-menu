@@ -1,8 +1,10 @@
+import React from "react";
+
 import styles from "./Header.module.css";
 
 import Logo from "../Logo";
 
-function Header() {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <Logo />
@@ -23,6 +25,6 @@ function Header() {
       </section>
     </header>
   );
-}
+};
 
 export default Header;

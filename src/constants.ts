@@ -1,7 +1,43 @@
 import Image from "next/image";
 
 import { Instagram, PhoneCall } from "react-feather";
-import Telegram from "../public/images/telegram-logo-thin.svg";
+
+interface Position {
+  name: string;
+  price: string | null;
+  subtitle?: string;
+  options?: string[];
+}
+
+export interface Content {
+  category: string;
+  centeredHeading?: boolean;
+  positions: Position[];
+  fullWidth?: boolean;
+}
+
+export interface MenuItem {
+  title: string;
+  slug: string;
+  content: Content[];
+}
+
+export interface Contact {
+  title: string;
+  link: string;
+  iconProps: {
+    src: string;
+    alt: string;
+  };
+  description: string;
+}
+
+export interface Address {
+  street: string;
+  info: string;
+  lat: number;
+  lng: number;
+}
 
 export const MENULINKS = [
   {
@@ -36,16 +72,13 @@ export const MENULINKS = [
   },
 ];
 
-export const MENU = [
+export const MENU: MenuItem[] = [
   {
     title: "FOOD",
     slug: "food",
-    types: ["STARTERS", "MAIN", "PANCAKES", "BURGERS", "*DAILY SPECIAL"],
-    // types: ["MAIN", "PANCAKES"],
     content: [
       {
-        type: "STARTERS",
-        // category: "SANDWICHES",
+        category: "STARTERS",
         positions: [
           {
             name: "Cheese soup",
@@ -75,7 +108,7 @@ export const MENU = [
       },
 
       {
-        type: "MAIN",
+        category: "MAIN",
         positions: [
           {
             name: "Mac & Cheese Bowl",
@@ -89,8 +122,7 @@ export const MENU = [
       },
 
       {
-        type: "PANCAKES",
-        category: "",
+        category: "PANCAKES",
         positions: [
           {
             name: "Nutella and banana",
@@ -109,7 +141,7 @@ export const MENU = [
       },
 
       {
-        type: "BURGERS",
+        category: "BURGERS",
         positions: [
           {
             name: "Cheeseburger",
@@ -152,7 +184,8 @@ export const MENU = [
       },
 
       {
-        type: "*DAILY SPECIAL",
+        category: "*DAILY SPECIAL",
+        centeredHeading: true,
         positions: [
           {
             name: "Ask the bartender!",
@@ -202,6 +235,38 @@ export const MENU = [
             name: "Alternative milk",
             subtitle: "(banana milk, soy milk, oat milk, vanilla milk)",
             price: "+2",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "TEA & SOFT DRINKS",
+    slug: "teaSoft",
+    content: [
+      {
+        category: "TEA",
+        positions: [
+          {
+            name: "Black tea/Green tea (cup)",
+            price: "5",
+          },
+          {
+            name: "Black tea/Green tea (pot)",
+            price: "10",
+          },
+        ],
+      },
+      {
+        category: "SOFT DRINKS",
+        positions: [
+          {
+            name: "Coca-Cola",
+            price: "4",
+          },
+          {
+            name: "Kombucha",
+            price: "10",
           },
         ],
       },
@@ -326,38 +391,6 @@ export const MENU = [
     ],
   },
   {
-    title: "TEA & SOFT DRINKS",
-    slug: "teaSoft",
-    content: [
-      {
-        category: "TEA",
-        positions: [
-          {
-            name: "Black tea/Green tea (cup)",
-            price: "5",
-          },
-          {
-            name: "Black tea/Green tea (pot)",
-            price: "10",
-          },
-        ],
-      },
-      {
-        category: "SOFT DRINKS",
-        positions: [
-          {
-            name: "Coca-Cola",
-            price: "4",
-          },
-          {
-            name: "Kombucha",
-            price: "10",
-          },
-        ],
-      },
-    ],
-  },
-  {
     title: "WINE & BEER",
     slug: "wineBeer",
     content: [
@@ -392,24 +425,29 @@ export const CONTACTS = [
   {
     title: "Telegram",
     link: "https://t.me/Sky_mother",
-    icon: <Image src={Telegram} alt='Telegram icon' height={30} width={30} />,
+    iconProps: { src: "/images/telegram-logo-thin.svg", alt: "Contact on Telegram" },
     description: "Contact us on Telegram",
   },
   {
     title: "Instagram",
     link: "https://www.instagram.com/handsome.tbilisi?igsh=cXprOXA1ODd3NHhn",
-    icon: <Instagram size={30} strokeWidth={1} />,
+    iconProps: { src: "/images/instagram.svg", alt: "Contact on Instagram" },
     description: "Follow us on Instagram",
   },
   {
     title: "Phone",
     link: "tel:+995599138719",
-    icon: <PhoneCall size={30} strokeWidth={1} />,
+    iconProps: { src: "/images/phone-call.svg", alt: "Call phone number" },
     description: "Contact us by phone",
   },
 ];
 
-export const ADDRESS = { street: "Tbilisi, Merab Kostava 35", lat: 41.70755988357727, lng: 44.787542958606494 };
+export const ADDRESS = {
+  street: "Tbilisi, Merab Kostava 35",
+  info: "Entrance from Kostava and Vera Park",
+  lat: 41.70755988357727,
+  lng: 44.787542958606494,
+};
 
 export const smoothSpring = {
   type: "spring",

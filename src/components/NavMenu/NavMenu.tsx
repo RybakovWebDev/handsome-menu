@@ -11,8 +11,17 @@ const loadFeatures = () => import("../../featuresMax").then((res) => res.default
 
 const animationFinished = { opacity: 1, scale: 1 };
 
-function NavMenu({ handleMenuClick }) {
-  const [navItem, setNavItem] = useState({ hovered: null, selected: null });
+interface NavItem {
+  hoveredItem: string | null;
+  selectedItem: string | null;
+}
+
+interface NavMenuProps {
+  handleMenuClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>, slug: string) => void;
+}
+
+const NavMenu: React.FC<NavMenuProps> = ({ handleMenuClick }) => {
+  const [navItem, setNavItem] = useState<NavItem>({ hoveredItem: null, selectedItem: null });
   const [canHover, setCanHover] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
 
@@ -37,20 +46,20 @@ function NavMenu({ handleMenuClick }) {
   };
 
   useEffect(() => {
-    setHasAnimated(navItem.hovered !== null || navItem.selected !== null);
+    setHasAnimated(navItem.hoveredItem !== null || navItem.selectedItem !== null);
   }, [navItem]);
 
   useEffect(() => {
     const totalAnimationTime = 0.3 + 0.1 * MENULINKS.length;
 
-    let timeoutIds = [];
-    let loopTimeoutId = setTimeout(() => {
+    let timeoutIds: number[] = [];
+    let loopTimeoutId = window.setTimeout(() => {
       MENULINKS.forEach((link, index) => {
-        let timeoutId = setTimeout(() => {
-          setNavItem({ ...navItem, selected: link.title });
+        let timeoutId = window.setTimeout(() => {
+          setNavItem({ ...navItem, selectedItem: link.title });
           if (index === MENULINKS.length - 1) {
-            setTimeout(() => {
-              setNavItem({ ...navItem, selected: null });
+            window.setTimeout(() => {
+              setNavItem({ ...navItem, selectedItem: null });
               setCanHover(true);
             }, 500);
           }
@@ -67,23 +76,23 @@ function NavMenu({ handleMenuClick }) {
 
   return (
     <div className={styles.wrapper}>
-      <nav className={styles.nav} onMouseLeave={() => setNavItem({ ...navItem, hovered: null })}>
+      <nav className={styles.nav} onMouseLeave={() => setNavItem({ ...navItem, hoveredItem: null })}>
         <LazyMotion features={loadFeatures}>
           <m.ul variants={container} initial='hidden' animate='show' className={styles.ul}>
             {MENULINKS.map((l) => (
               <m.li variants={item} key={l.title} className={styles.li}>
                 <button
                   aria-label={`Show ${l.title.toLowerCase()} menu`}
-                  onMouseEnter={() => canHover && setNavItem({ ...navItem, hovered: l.title })}
+                  onMouseEnter={() => canHover && setNavItem({ ...navItem, hoveredItem: l.title })}
                   onClick={(e) => {
                     handleMenuClick(e, l.slug);
-                    setNavItem({ ...navItem, selected: l.title });
+                    setNavItem({ ...navItem, selectedItem: l.title });
                   }}
                 >
                   {l.title}
                 </button>
                 <AnimatePresence>
-                  {navItem.selected === l.title && (
+                  {navItem.selectedItem === l.title && (
                     <m.div
                       className={styles.selected}
                       layoutId={id}
@@ -96,7 +105,7 @@ function NavMenu({ handleMenuClick }) {
                 </AnimatePresence>
 
                 <AnimatePresence>
-                  {navItem.hovered === l.title && (
+                  {navItem.hoveredItem === l.title && (
                     <m.div
                       className={styles.hovered}
                       layoutId={idHovered}
@@ -114,6 +123,6 @@ function NavMenu({ handleMenuClick }) {
       </nav>
     </div>
   );
-}
+};
 
 export default NavMenu;

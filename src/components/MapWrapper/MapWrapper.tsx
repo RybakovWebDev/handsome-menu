@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { LazyMotion, m } from "framer-motion";
 
 import styles from "./MapWrapper.module.css";
@@ -7,7 +8,7 @@ const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
 const loadFeatures = () => import("../../features").then((res) => res.default);
 
-function MapWrapper() {
+const MapWrapper: React.FC = () => {
   return (
     <LazyMotion features={loadFeatures}>
       <m.section
@@ -26,6 +27,6 @@ function MapWrapper() {
       </m.section>
     </LazyMotion>
   );
-}
+};
 
 export default MapWrapper;

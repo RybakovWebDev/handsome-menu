@@ -1,3 +1,4 @@
+import React from "react";
 import dynamic from "next/dynamic";
 
 import styles from "./Footer.module.css";
@@ -6,17 +7,18 @@ import SocialLinks from "../SocialLinks";
 
 const MapWrapper = dynamic(() => import("@/components/MapWrapper"));
 
-import { ADDRESS } from "@/constants";
+import { ADDRESS, Address } from "@/constants";
 
-function Footer() {
+const Footer: React.FC = () => {
+  const { street, info } = ADDRESS as Address;
   return (
     <footer className={styles.footer}>
       <MapWrapper />
       <SocialLinks />
-      <p>{ADDRESS.street}</p>
-      <p>Entrance from Kostava and Vera Park</p>
+      <p>{street}</p>
+      <p>{info}</p>
     </footer>
   );
-}
+};
 
 export default Footer;
