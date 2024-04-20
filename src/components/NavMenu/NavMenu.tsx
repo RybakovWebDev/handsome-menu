@@ -84,6 +84,9 @@ const NavMenu: React.FC<NavMenuProps> = ({ handleMenuClick }) => {
                 <button
                   aria-label={`Show ${l.title.toLowerCase()} menu`}
                   onMouseEnter={() => canHover && setNavItem({ ...navItem, hoveredItem: l.title })}
+                  onMouseLeave={() => setNavItem({ ...navItem, hoveredItem: null })}
+                  onFocus={() => canHover && setNavItem({ ...navItem, hoveredItem: l.title })}
+                  onBlur={() => setNavItem({ ...navItem, hoveredItem: null })}
                   onClick={(e) => {
                     handleMenuClick(e, l.slug);
                     setNavItem({ ...navItem, selectedItem: l.title });
