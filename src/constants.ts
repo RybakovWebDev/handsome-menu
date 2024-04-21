@@ -1,7 +1,3 @@
-import Image from "next/image";
-
-import { Instagram, PhoneCall } from "react-feather";
-
 interface Position {
   name: string;
   price: string | null;
